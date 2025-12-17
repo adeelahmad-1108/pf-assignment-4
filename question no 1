@@ -1,0 +1,123 @@
+#include <iostream>
+using namespace std;
+const int  day=7,times=4;
+ void inputdata(int temperature[day][times]){
+     
+    
+     for(int i=0;i<day;i++){
+           for(int j=0;j<times;j++){
+            cout<<"enter the day"<< i+1 << "temperatures "<<j+1<<endl;
+            cin>>temperature[i][j];
+           }
+     }
+    }
+           
+
+     int highest(int  temperature[day][times]){
+       int high =temperature[0][0];    
+      
+      for (int i=0;i<day;i++){
+        for(int j=0;j<times;j++){
+        
+            
+            if(temperature[i][j]>high){
+                high=temperature[i][j];
+                
+            
+        }
+    }
+}
+     return high;
+     }
+     int lowest(int  temperature[day][times]){
+       int low =temperature[0][0];    
+      
+      for (int i=0;i<day;i++){
+        for(int j=0;j<times;j++){
+        
+            
+            if(temperature[i][j]<low){
+                low=temperature[i][j];
+                
+            
+        }
+    }
+}
+     return low;
+     }
+     int avg( int temperature[day][times]){
+        for(int i=0;i<day;i++){
+             int sum=0;
+        
+        for(int j=0;j<times;j++){
+            sum +=temperature[j][j];
+            float avg=sum/4.0;
+
+            cout<<"average"<<avg<<endl;
+        }
+     }
+     return 0;
+    }
+    void table(int temperature[day][times]){
+        cout<<".........table..........."<<endl;
+        for(int i=0;i<day;i++){
+            cout<<"days"<<i+1<<endl;
+           for(int j=0;j<times;j++){
+            cout<<temperature[i][j];
+            
+           }
+     }cout<<endl;
+     }
+    
+    
+    
+    
+ 
+ 
+int main(){
+    
+   int temperature[day][times];    
+     
+ 
+ inputdata(temperature );
+ 
+int high = highest(temperature );
+cout<<"higest temperature "<<high<<endl;
+int low = lowest(temperature);
+cout<<"lowest temperature "<<low <<endl;
+ avg(temperature);
+
+ table(temperature);
+
+
+return 0;
+}
+
+        
+     
+     
+    
+
+
+
+
+     
+
+     
+           
+     
+           
+           
+         
+
+            
+         
+        
+      
+    
+        
+    
+
+        
+
+
