@@ -1,0 +1,10 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+    vector<int>a={1,40,70,60};
+    for(int i:a){
+        cout<<"the number" <<i<<" ";
+    }
+}
+
